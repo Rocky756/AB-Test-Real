@@ -24,7 +24,7 @@ const buildStatic = path.resolve(__dirname, '../front/build/');
 
 app.use(express.static(buildStatic))
 
-app.use('/', dateRouter);
+app.use('/db', dateRouter);
 
 app.get('*', (req, res) => {
   res.sendFile(buildHtml)

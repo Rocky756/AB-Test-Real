@@ -1,7 +1,7 @@
 import { GET_RRD, DATA } from "../types";
 
 export const getRRDFetch = async () => {
-  const response = await fetch(`http://localhost:5000/getrrd`, {
+  const response = await fetch(`http://localhost:5000/db/getrrd`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

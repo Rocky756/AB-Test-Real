@@ -27,7 +27,7 @@ export const Form = () => {
   // Сохраняю даты в базу данных, очищаю value дат и убираю лишние строки таблицы
   const submitHandler = async (event) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:5000/upload', {
+    const response = await fetch('http://localhost:5000/db/upload', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
