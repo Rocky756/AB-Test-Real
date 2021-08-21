@@ -52,7 +52,7 @@ router.get('/getrrd', async(req, res) => {
   }
   }
   // Вычисляем по формуле
-  const rrd = +(returnUsers.length / download7dUsers.length * 100).toFixed(1);
+  const rrd = +(returnUsers.length / download7dUsers.length).toFixed(1);
   console.log(rrd); 
   res.json({ rrd, lifeSpan })
 })
