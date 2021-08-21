@@ -1,0 +1,12 @@
+{
+  "name": "abtestreal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && yarn init && yarn build",
+    "start": "cd backend && yarn init && yarn start"
+  },
+  "repository": "git@github.com:Rocky756/AB-Test-Real.git",
+  "author": "Ruslan <ruslandegtyrev@gmail.com>",
+  "license": "MIT"
+}
