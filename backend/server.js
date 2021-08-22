@@ -19,18 +19,18 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 // Подключаем middleware, которое позволяет читать переменные JavaScript, сохранённые в формате JSON в body HTTP-запроса.
 app.use(express.json());
-const buildHtml = path.resolve(__dirname, '../front/build/index.html');
-const buildStatic = path.resolve(__dirname, '../front/build/');
-
+const buildHtml = path.resolve(__dirname, '../frontend/build/index.html');
+const buildStatic = path.resolve(__dirname, '../frontend/build/');
+console.log('выше static');
 app.use(express.static(buildStatic))
-
+console.log('выше db');
 app.use('/db', dateRouter);
-
+console.log('ушел ниже db');
 app.get('*', (req, res) => {
   res.sendFile(buildHtml)
 })
 
-
+console.log('ушел ниже');
 app.use((req, res, next) => {
   const error = createError(404, 'Запрашиваемой страницы не существует на сервере.');
   next(error);
